@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="TKw-7n-xeB">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="JQ1-9l-gNc">
+            <objects>
+                <viewController id="TKw-7n-xeB" customClass="ViewController" customModule="LoginPage" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sDS-ag-VzU"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vlv-iM-e4L"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="II1-ax-r43">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="o4S-9G-bdN">
+                                <rect key="frame" x="70" y="28.5" width="180" height="170.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="o4S-9G-bdN" secondAttribute="height" multiplier="179:170" id="B9u-kU-8B3"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AgD-gQ-ktj">
+                                <rect key="frame" x="64" y="240.5" width="192" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qp7-Da-Fp4">
+                                <rect key="frame" x="64" y="278.5" width="192" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzT-Ur-JSN">
+                                <rect key="frame" x="64" y="317" width="92" height="30"/>
+                                <state key="normal" title="Sign In"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2N-W5-NdF">
+                                <rect key="frame" x="164" y="317" width="92" height="30"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="t2N-W5-NdF" firstAttribute="leading" secondItem="fzT-Ur-JSN" secondAttribute="trailing" priority="750" constant="8" id="7F4-DF-CqI"/>
+                            <constraint firstItem="o4S-9G-bdN" firstAttribute="centerY" secondItem="II1-ax-r43" secondAttribute="centerY" multiplier="0.4" id="9Jl-rk-xHO"/>
+                            <constraint firstItem="Qp7-Da-Fp4" firstAttribute="leading" secondItem="AgD-gQ-ktj" secondAttribute="leading" id="A1g-hc-XER"/>
+                            <constraint firstItem="Qp7-Da-Fp4" firstAttribute="trailing" secondItem="t2N-W5-NdF" secondAttribute="trailing" id="B8h-w6-E7K"/>
+                            <constraint firstItem="Qp7-Da-Fp4" firstAttribute="centerX" secondItem="o4S-9G-bdN" secondAttribute="centerX" id="Bse-Ki-FkZ"/>
+                            <constraint firstItem="o4S-9G-bdN" firstAttribute="centerX" secondItem="II1-ax-r43" secondAttribute="centerX" id="HJe-qg-Z93"/>
+                            <constraint firstItem="Qp7-Da-Fp4" firstAttribute="top" secondItem="AgD-gQ-ktj" secondAttribute="bottom" constant="8" id="J5o-ka-4Y0"/>
+                            <constraint firstItem="o4S-9G-bdN" firstAttribute="height" secondItem="II1-ax-r43" secondAttribute="height" multiplier="0.3" id="LDa-Ci-hHX"/>
+                            <constraint firstItem="AgD-gQ-ktj" firstAttribute="centerX" secondItem="II1-ax-r43" secondAttribute="centerX" id="QSW-wa-MJ4"/>
+                            <constraint firstItem="t2N-W5-NdF" firstAttribute="top" secondItem="Qp7-Da-Fp4" secondAttribute="bottom" constant="8" symbolic="YES" id="XnN-0Q-L3a"/>
+                            <constraint firstItem="AgD-gQ-ktj" firstAttribute="centerY" secondItem="II1-ax-r43" secondAttribute="centerY" multiplier="0.9" id="dz2-ob-pTU"/>
+                            <constraint firstItem="fzT-Ur-JSN" firstAttribute="width" secondItem="t2N-W5-NdF" secondAttribute="width" id="fJr-jn-Bvw"/>
+                            <constraint firstItem="AgD-gQ-ktj" firstAttribute="width" secondItem="II1-ax-r43" secondAttribute="width" multiplier="0.6" id="hp5-k6-CcL"/>
+                            <constraint firstItem="Qp7-Da-Fp4" firstAttribute="leading" secondItem="fzT-Ur-JSN" secondAttribute="leading" id="scq-Wx-zkK"/>
+                            <constraint firstItem="fzT-Ur-JSN" firstAttribute="top" secondItem="Qp7-Da-Fp4" secondAttribute="bottom" constant="8" symbolic="YES" id="vdC-Qc-uIE"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="91h-3M-8VR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-11.25" y="-9.5070422535211261"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="image" width="394" height="379"/>
+    </resources>
+</document>
