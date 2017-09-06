@@ -33,23 +33,29 @@
                                 <rect key="frame" x="64" y="240.5" width="192" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qp7-Da-Fp4">
                                 <rect key="frame" x="64" y="278.5" width="192" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzT-Ur-JSN">
                                 <rect key="frame" x="64" y="317" width="92" height="30"/>
                                 <state key="normal" title="Sign In"/>
+                                <connections>
+                                    <action selector="signInButtonAction:" destination="TKw-7n-xeB" eventType="touchUpInside" id="VOY-7h-9cE"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2N-W5-NdF">
                                 <rect key="frame" x="164" y="317" width="92" height="30"/>
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="signUpButtonAction:" destination="TKw-7n-xeB" eventType="touchUpInside" id="5Vw-5h-MtW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -71,6 +77,10 @@
                             <constraint firstItem="fzT-Ur-JSN" firstAttribute="top" secondItem="Qp7-Da-Fp4" secondAttribute="bottom" constant="8" symbolic="YES" id="vdC-Qc-uIE"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="idTextField" destination="AgD-gQ-ktj" id="K75-MZ-tP3"/>
+                        <outlet property="pwdTextField" destination="Qp7-Da-Fp4" id="wej-Jr-B8j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="91h-3M-8VR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
