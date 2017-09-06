@@ -9,16 +9,22 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var idTextField: UITextField!
+    @IBOutlet weak var pwdTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func signInButtonAction(_ sender: UIButton) {
+        print("touched SignIn")
+        print("ID: \(idTextField.text!), PWD: \(pwdTextField.text!)")
     }
-
+    @IBAction func signUpButtonAction(_ sender: UIButton) {
+        print("touched SignUp")
+    }
 
 }
 
