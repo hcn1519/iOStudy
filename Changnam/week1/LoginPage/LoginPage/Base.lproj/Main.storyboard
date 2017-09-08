@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LoginPage" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pU9-f6-sb8">
+                                <rect key="frame" x="96" y="280.5" width="183" height="106"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XVg-Qo-1u1">
+                                        <rect key="frame" x="0.0" y="0.0" width="183" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GO8-FV-Fvt">
+                                        <rect key="frame" x="0.0" y="38" width="183" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="88J-4J-cSc">
+                                        <rect key="frame" x="0.0" y="76" width="183" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jal-RS-nh6">
+                                                <rect key="frame" x="0.0" y="0.0" width="91.5" height="30"/>
+                                                <state key="normal" title="SignIn"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1x7-3L-gkJ">
+                                                <rect key="frame" x="91.5" y="0.0" width="91.5" height="30"/>
+                                                <state key="normal" title="SignUp">
+                                                    <color key="titleColor" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="GO8-FV-Fvt" secondAttribute="trailing" id="3Qg-4s-Lx4"/>
+                                    <constraint firstItem="GO8-FV-Fvt" firstAttribute="leading" secondItem="pU9-f6-sb8" secondAttribute="leading" id="AYy-qD-0Hn"/>
+                                    <constraint firstAttribute="trailing" secondItem="XVg-Qo-1u1" secondAttribute="trailing" id="X0g-PF-Tfj"/>
+                                    <constraint firstItem="88J-4J-cSc" firstAttribute="leading" secondItem="pU9-f6-sb8" secondAttribute="leading" id="n21-VN-S6S"/>
+                                    <constraint firstItem="XVg-Qo-1u1" firstAttribute="leading" secondItem="pU9-f6-sb8" secondAttribute="leading" id="xYp-gi-6dk"/>
+                                    <constraint firstAttribute="trailing" secondItem="88J-4J-cSc" secondAttribute="trailing" id="zfx-aL-aXG"/>
+                                </constraints>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="OQs-er-Ycr">
+                                <rect key="frame" x="96" y="40" width="183" height="178.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="OQs-er-Ycr" secondAttribute="height" multiplier="207:202" id="3gs-WN-PEp"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pU9-f6-sb8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="79b-G1-HzP"/>
+                            <constraint firstItem="OQs-er-Ycr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="YMj-nx-HZX"/>
+                            <constraint firstItem="pU9-f6-sb8" firstAttribute="trailing" secondItem="OQs-er-Ycr" secondAttribute="trailing" id="gY4-zj-gcC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pU9-f6-sb8" secondAttribute="trailing" constant="80" id="hEE-L9-Ib7"/>
+                            <constraint firstItem="pU9-f6-sb8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="80" id="iZj-ha-8QZ"/>
+                            <constraint firstItem="pU9-f6-sb8" firstAttribute="leading" secondItem="OQs-er-Ycr" secondAttribute="leading" id="x1H-02-oXG"/>
+                            <constraint firstItem="OQs-er-Ycr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xGI-rx-mhc"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="image" width="394" height="379"/>
+    </resources>
+</document>
