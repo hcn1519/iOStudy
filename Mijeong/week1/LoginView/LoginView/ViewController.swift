@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var IDTextField: UITextField!
+    @IBOutlet weak var PasswordTextField: UITextField!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +23,13 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func SignUpButtonAction(_ sender: Any) {
+        print("touch up inside - sign up")
+    }
+    @IBAction func SignInButtonAction(_ sender: Any) {
+        if let id = IDTextField.text, let pw = PasswordTextField.text {
+                    print("ID : \(id), PW : \(pw)")
+        }
+    }
 }
 
