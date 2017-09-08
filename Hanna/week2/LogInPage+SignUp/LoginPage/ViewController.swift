@@ -24,8 +24,6 @@ class ViewController: UIViewController {
     }
     @IBAction func signUpButtonAction(_ sender: UIButton) {
         print("touched SignUp")
-        let signUpViewController = storyboard?.instantiateViewController(withIdentifier: "SignUpView") as! SignUpViewController
-        present(signUpViewController, animated: true, completion: nil)
     }
 
 }
