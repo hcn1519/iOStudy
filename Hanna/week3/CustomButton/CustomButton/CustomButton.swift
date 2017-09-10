@@ -52,9 +52,14 @@ class CustomButton: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        label.frame = self.bounds
-        label.textAlignment = .center
         self.addSubview(label)
+        label.frame = self.bounds
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.topAnchor.constraint(equalTo: self.topAnchor, constant: 0).isActive = true
+        label.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0).isActive = true
+        label.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0).isActive = true
+        label.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0).isActive = true
+        label.textAlignment = .center
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -62,16 +67,15 @@ class CustomButton: UIView {
     }
     
     func setTitle(_ title: String?, for state: ControlState) {
-        self.drawButton()
         var option = self.option.stateOption(for: state) ?? Option()
         option.title = title
-        self.option.setStateOption(option, for: state)
+        self.option.setStateOption(option, for: state, button: self)
     }
     
     func setTitleColor(_ color: UIColor?, for state: ControlState) {
         var option = self.option.stateOption(for: state) ?? Option()
         option.titleColor = color
-        self.option.setStateOption(option, for: state)
+        self.option.setStateOption(option, for: state, button: self)
     }
     
     func drawButton() {
@@ -83,7 +87,7 @@ class CustomButton: UIView {
         
         let option = self.option.stateOption(for: state)
         let normalOption = self.option.stateOption(for: .normal)
-        
+
         self.label.text = option?.title ?? normalOption?.title
         self.label.textColor = option?.titleColor ?? normalOption?.titleColor
     }
@@ -102,8 +106,6 @@ extension CustomButton {
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.state.remove(.highlighted)
-        self.isSelected = !self.isSelected
-        
         targetActions.forEach { $0.target.perform($0.selector, with: self, afterDelay: 0) }
     }
 }
@@ -130,8 +132,9 @@ struct Option {
         return infoDic[state] as? Option
     }
     
-    mutating func setStateOption(_ info: Option, for state: ControlState) {
+    mutating func setStateOption(_ info: Option, for state: ControlState, button: CustomButton) {
         infoDic[state] = info
+        button.drawButton()
     }
 }
 
