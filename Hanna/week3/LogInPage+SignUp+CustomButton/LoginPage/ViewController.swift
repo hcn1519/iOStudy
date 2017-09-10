@@ -25,10 +25,12 @@ class ViewController: UIViewController {
         signInButton.setTitleColor(UIView().tintColor, for: .normal)
         signInButton.setTitleColor(.green, for: [.normal, .highlighted])
         signInButton.setTitleColor(.purple, for: [.selected, .highlighted])
+        signInButton.setTitleFont(.systemFont(ofSize: 15), for: .normal)
         
         signUpButton.setTitle("Sign Up", for: .normal)
         signUpButton.setTitleColor(.red, for: .normal)
         signUpButton.setTitleColor(.green, for: [.normal, .highlighted])
+        signUpButton.setTitleFont(.systemFont(ofSize: 15), for: .normal)
         
         signInButton.translatesAutoresizingMaskIntoConstraints = false
         signInButton.leadingAnchor.constraint(equalTo: pwdTextField.leadingAnchor).isActive = true

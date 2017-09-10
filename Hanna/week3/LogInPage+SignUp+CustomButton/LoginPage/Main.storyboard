@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="TKw-7n-xeB">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -21,23 +21,23 @@
                         <viewControllerLayoutGuide type="bottom" id="Vlv-iM-e4L"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="II1-ax-r43">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="o4S-9G-bdN">
-                                <rect key="frame" x="82" y="33.5" width="211" height="200"/>
+                                <rect key="frame" x="90.666666666666686" y="36.666666666666671" width="232.66666666666663" height="221"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="o4S-9G-bdN" secondAttribute="height" multiplier="179:170" id="B9u-kU-8B3"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AgD-gQ-ktj">
-                                <rect key="frame" x="75" y="285" width="225" height="30"/>
+                                <rect key="frame" x="82.666666666666686" y="316.33333333333331" width="248.66666666666663" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qp7-Da-Fp4">
-                                <rect key="frame" x="75" y="323" width="225" height="30"/>
+                                <rect key="frame" x="82.666666666666686" y="354.33333333333331" width="248.66666666666663" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
@@ -74,59 +74,50 @@
                         <viewControllerLayoutGuide type="bottom" id="NGp-5G-qIk"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1cF-l8-HWV">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zei-cw-gXO">
-                                <rect key="frame" x="16" y="28" width="112.5" height="112.5"/>
+                                <rect key="frame" x="20" y="28" width="124.33333333333334" height="124.33333333333334"/>
                                 <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="zei-cw-gXO" secondAttribute="height" multiplier="1:1" id="Pgd-ko-t74"/>
                                 </constraints>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="XVF-tZ-D5H" appends="YES" id="SAB-lg-A9F"/>
-                                </connections>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ffy-yV-4bC">
-                                <rect key="frame" x="135.5" y="28" width="223.5" height="30"/>
+                                <rect key="frame" x="151.33333333333337" y="28" width="242.66666666666663" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R75-jk-yGo">
-                                <rect key="frame" x="135.5" y="69.5" width="223.5" height="30"/>
+                                <rect key="frame" x="151.33333333333337" y="75" width="242.66666666666663" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Check Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JSc-IH-CN9">
-                                <rect key="frame" x="135.5" y="110.5" width="223.5" height="30"/>
+                                <rect key="frame" x="151.33333333333337" y="122.33333333333334" width="242.66666666666663" height="30.000000000000028"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gRR-KH-Io1">
-                                <rect key="frame" x="16" y="147.5" width="343" height="473.5"/>
+                                <rect key="frame" x="20" y="159.33333333333331" width="374" height="530.66666666666674"/>
                                 <color key="backgroundColor" red="0.80000001190000003" green="0.40000000600000002" blue="1" alpha="0.39490582191780821" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6jp-Xm-gv9">
-                                <rect key="frame" x="16" y="629" width="167.5" height="30"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6jp-Xm-gv9">
+                                <rect key="frame" x="20" y="698" width="183" height="30"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <connections>
-                                    <action selector="cancelButtonAction:" destination="zTu-fL-HTy" eventType="touchUpInside" id="5xs-Vu-XmJ"/>
-                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQc-6A-x1a">
-                                <rect key="frame" x="191.5" y="629" width="167.5" height="30"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQc-6A-x1a">
+                                <rect key="frame" x="211" y="698" width="183" height="30"/>
                                 <state key="normal" title="Sign Up"/>
-                                <connections>
-                                    <action selector="signUpButtonAction:" destination="zTu-fL-HTy" eventType="touchUpInside" id="mQD-Z7-2Gz"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -156,9 +147,6 @@
                             <constraint firstItem="sQc-6A-x1a" firstAttribute="top" secondItem="gRR-KH-Io1" secondAttribute="bottom" constant="8" id="gwK-hE-0bN"/>
                             <constraint firstItem="gRR-KH-Io1" firstAttribute="leading" secondItem="1cF-l8-HWV" secondAttribute="leadingMargin" id="unE-Lx-X85"/>
                         </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="XMN-Va-e5C" appends="YES" id="ocg-bD-N81"/>
-                        </connections>
                     </view>
                     <connections>
                         <outlet property="checkPwdTextField" destination="JSc-IH-CN9" id="To8-at-8sJ"/>
@@ -169,16 +157,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rao-tc-2X1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="XVF-tZ-D5H">
-                    <connections>
-                        <action selector="profileImagePicker:" destination="zTu-fL-HTy" id="JJS-v8-bdl"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="XMN-Va-e5C">
-                    <connections>
-                        <action selector="tapViewAction:" destination="zTu-fL-HTy" id="heE-0J-Mya"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="727.20000000000005" y="-11.244377811094454"/>
         </scene>
