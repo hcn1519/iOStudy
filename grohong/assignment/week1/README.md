@@ -8,4 +8,4 @@
 - aspect Ration: 가로와 세로 비율을 맞춘다.
 
 - UITextField에 비밀번호를 처리 할려면 **Secure Text Entry** 클릭
-![secure](./images/SecureTextEntry)
+![secure](./images/SecureTextEntry.png)
