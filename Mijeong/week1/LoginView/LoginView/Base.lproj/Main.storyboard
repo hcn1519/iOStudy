@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1611" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_5" orientation="landscape">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,17 +19,17 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="65k-Sg-BKm">
-                                <rect key="frame" x="0.0" y="20" width="736" height="132"/>
+                                <rect key="frame" x="0.0" y="40" width="414" height="253"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tGY-ko-zSo">
-                                <rect key="frame" x="143" y="172" width="450" height="110"/>
+                                <rect key="frame" x="70" y="333" width="274" height="110"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i3E-ip-DAL">
-                                        <rect key="frame" x="0.0" y="0.0" width="450" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="274" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="zG6-Jo-csC"/>
                                         </constraints>
@@ -38,7 +38,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FNw-HM-VTA">
-                                        <rect key="frame" x="0.0" y="40" width="450" height="30"/>
+                                        <rect key="frame" x="0.0" y="40" width="274" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="tlt-hW-yVj"/>
                                         </constraints>
@@ -47,17 +47,17 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DeF-OD-oSe">
-                                        <rect key="frame" x="0.0" y="80" width="450" height="30"/>
+                                        <rect key="frame" x="0.0" y="80" width="274" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iXY-xf-Tbu">
-                                                <rect key="frame" x="0.0" y="0.0" width="225" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="137" height="30"/>
                                                 <state key="normal" title="Sign In"/>
                                                 <connections>
                                                     <action selector="SignInButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="exr-yL-fN3"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfH-FK-pZB">
-                                                <rect key="frame" x="225" y="0.0" width="225" height="30"/>
+                                                <rect key="frame" x="137" y="0.0" width="137" height="30"/>
                                                 <state key="normal" title="Sign Up">
                                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
@@ -173,6 +173,7 @@
                     <connections>
                         <outlet property="IDTextField" destination="i3E-ip-DAL" id="BmX-bP-jWP"/>
                         <outlet property="PasswordTextField" destination="FNw-HM-VTA" id="Rfn-LE-Jen"/>
+                        <outlet property="containerStackView" destination="tGY-ko-zSo" id="1aT-Am-mAg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
