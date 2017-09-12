@@ -56,6 +56,7 @@ class PlayViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        guard buttons.isEmpty else { return }
         makeButtons()
     }
     
