@@ -17,6 +17,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardwillShow), name: .UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardwillHide), name: .UIKeyboardWillHide, object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,6 +32,10 @@ class ViewController: UIViewController {
             let newBoundY = keyboardHeight - (self.view.frame.height - containerStackView.frame.maxY)
             self.view.bounds = CGRect(origin: CGPoint(x: self.view.bounds.origin.x, y: newBoundY) , size: self.view.bounds.size)
         }
+    }
+    
+    func keyboardwillHide(notification: Notification) {
+        self.view.bounds = CGRect(origin: CGPoint(x: 0, y: 0), size: self.view.bounds.size)
     }
 
     @IBAction func SignUpButtonAction(_ sender: Any) {
