@@ -25,6 +25,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+        self.view.endEditing(true)
+    }
+    
     func keyboardwillShow(notification: Notification) {
         let keyboardFrame = notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue
         if let keyboardHeight = keyboardFrame?.cgRectValue.height,
@@ -40,11 +44,14 @@ class ViewController: UIViewController {
 
     @IBAction func SignUpButtonAction(_ sender: Any) {
         print("touch up inside - sign up")
+        self.view.endEditing(true)
     }
+    
     @IBAction func SignInButtonAction(_ sender: Any) {
         if let id = IDTextField.text, let pw = PasswordTextField.text {
                     print("ID : \(id), PW : \(pw)")
         }
+        self.view.endEditing(true)
     }
 }
 
