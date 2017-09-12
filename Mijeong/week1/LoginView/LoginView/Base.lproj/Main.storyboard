@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="65k-Sg-BKm">
-                                <rect key="frame" x="0.0" y="35" width="320" height="145"/>
+                                <rect key="frame" x="0.0" y="40" width="320" height="125"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tGY-ko-zSo">
                                 <rect key="frame" x="66" y="205" width="188" height="110"/>
@@ -87,15 +87,38 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="65k-Sg-BKm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0mV-43-nMF"/>
+                            <constraint firstAttribute="trailing" secondItem="65k-Sg-BKm" secondAttribute="trailing" id="4L6-2Y-QiC"/>
                             <constraint firstAttribute="trailing" secondItem="tGY-ko-zSo" secondAttribute="trailing" priority="750" constant="70" id="8C4-qh-6RB"/>
+                            <constraint firstItem="tGY-ko-zSo" firstAttribute="top" secondItem="65k-Sg-BKm" secondAttribute="bottom" constant="20" id="BXo-Mp-Ipz"/>
+                            <constraint firstItem="65k-Sg-BKm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Cvc-Cy-N7G"/>
                             <constraint firstItem="tGY-ko-zSo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="20" id="D6U-YS-5ah"/>
-                            <constraint firstItem="tGY-ko-zSo" firstAttribute="top" secondItem="65k-Sg-BKm" secondAttribute="bottom" constant="25" id="HK5-7O-In1"/>
-                            <constraint firstItem="65k-Sg-BKm" firstAttribute="centerX" secondItem="tGY-ko-zSo" secondAttribute="centerX" id="UEV-qG-7Vy"/>
                             <constraint firstItem="tGY-ko-zSo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" priority="750" constant="70" id="X4J-p2-YEv"/>
+                            <constraint firstItem="65k-Sg-BKm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="YcQ-46-yd8"/>
                             <constraint firstItem="tGY-ko-zSo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dbf-Ua-27x"/>
-                            <constraint firstItem="65k-Sg-BKm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="lxp-iQ-ayY"/>
+                            <constraint firstItem="65k-Sg-BKm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="gzt-rT-TSd"/>
+                            <constraint firstItem="tGY-ko-zSo" firstAttribute="top" secondItem="65k-Sg-BKm" secondAttribute="bottom" constant="40" id="jc3-0W-I1E"/>
+                            <constraint firstItem="65k-Sg-BKm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yHS-1H-qci"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="YcQ-46-yd8"/>
+                                <exclude reference="gzt-rT-TSd"/>
+                                <exclude reference="BXo-Mp-Ipz"/>
+                                <exclude reference="jc3-0W-I1E"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="YcQ-46-yd8"/>
+                                <include reference="BXo-Mp-Ipz"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="constraints">
+                                <include reference="gzt-rT-TSd"/>
+                                <include reference="jc3-0W-I1E"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="IDTextField" destination="i3E-ip-DAL" id="BmX-bP-jWP"/>
@@ -104,7 +127,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="103.125" y="122.5"/>
+            <point key="canvasLocation" x="98.75" y="118.125"/>
         </scene>
     </scenes>
     <resources>
