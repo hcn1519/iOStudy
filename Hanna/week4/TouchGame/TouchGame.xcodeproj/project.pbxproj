@@ -14,6 +14,8 @@
 		B500AB521F65A8AF0089FC86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B500AB501F65A8AF0089FC86 /* LaunchScreen.storyboard */; };
 		B57BC1D61F665B1700AF06AD /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57BC1D51F665B1700AF06AD /* HistoryViewController.swift */; };
 		B57BC1D81F665B2500AF06AD /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57BC1D71F665B2500AF06AD /* PlayViewController.swift */; };
+		B57BC1DC1F67D4B500AF06AD /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57BC1DB1F67D4B500AF06AD /* Extension.swift */; };
+		B57BC1E01F6848D700AF06AD /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57BC1DF1F6848D700AF06AD /* Record.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		B500AB531F65A8AF0089FC86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B57BC1D51F665B1700AF06AD /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		B57BC1D71F665B2500AF06AD /* PlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
+		B57BC1DB1F67D4B500AF06AD /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		B57BC1DF1F6848D700AF06AD /* Record.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,10 +66,12 @@
 				B500AB491F65A8AF0089FC86 /* MainViewController.swift */,
 				B57BC1D71F665B2500AF06AD /* PlayViewController.swift */,
 				B57BC1D51F665B1700AF06AD /* HistoryViewController.swift */,
+				B57BC1DB1F67D4B500AF06AD /* Extension.swift */,
 				B500AB4B1F65A8AF0089FC86 /* Main.storyboard */,
 				B500AB4E1F65A8AF0089FC86 /* Assets.xcassets */,
 				B500AB501F65A8AF0089FC86 /* LaunchScreen.storyboard */,
 				B500AB531F65A8AF0089FC86 /* Info.plist */,
+				B57BC1DF1F6848D700AF06AD /* Record.swift */,
 			);
 			path = TouchGame;
 			sourceTree = "<group>";
@@ -142,7 +148,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B57BC1DC1F67D4B500AF06AD /* Extension.swift in Sources */,
 				B57BC1D81F665B2500AF06AD /* PlayViewController.swift in Sources */,
+				B57BC1E01F6848D700AF06AD /* Record.swift in Sources */,
 				B57BC1D61F665B1700AF06AD /* HistoryViewController.swift in Sources */,
 				B500AB4A1F65A8AF0089FC86 /* MainViewController.swift in Sources */,
 				B500AB481F65A8AF0089FC86 /* AppDelegate.swift in Sources */,

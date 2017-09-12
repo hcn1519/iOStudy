@@ -160,15 +160,17 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bestRecordLabel" destination="1UA-j0-6VU" id="YTl-A9-oRk"/>
                         <outlet property="containerView" destination="QWg-l2-bfg" id="kkt-0g-QQT"/>
                         <outlet property="historyButton" destination="W9N-Yb-DiU" id="iO5-xF-hkv"/>
                         <outlet property="homeButton" destination="lRM-M3-Vqk" id="zaD-Ix-mVg"/>
                         <outlet property="startButton" destination="MC6-OX-D2w" id="uqd-CY-ydp"/>
+                        <outlet property="timerLabel" destination="TXh-c3-fUx" id="kLm-z7-xG0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jL9-ao-Lcs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1076" y="819.94002998500753"/>
+            <point key="canvasLocation" x="1076" y="853"/>
         </scene>
         <!--History View Controller-->
         <scene sceneID="Oup-D4-nO5">
