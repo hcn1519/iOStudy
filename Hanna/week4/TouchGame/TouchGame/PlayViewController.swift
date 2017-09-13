@@ -187,7 +187,7 @@ extension PlayViewController {
         UIAlertAction.okButton(target: alertController, handler: { (_) in
             let name = alertController.textFields?[0].text
             let record = Record(name: name, scoreTime: self.time)
-            Record.recordList.append(record)
+            RecordList.shared.recordList.append(record)
             self.updateBestScore()
             self.time = Double()
         })
@@ -195,7 +195,7 @@ extension PlayViewController {
     }
     
     func updateBestScore() {
-        if let highScore = Record.recordList.first {
+        if let highScore = RecordList.shared.recordList.first {
             bestRecordLabel.text = "\(highScore.name) \(highScore.scoreTime.convertTimeToString())"
         } else {
             bestRecordLabel.text = "- --:--:--"

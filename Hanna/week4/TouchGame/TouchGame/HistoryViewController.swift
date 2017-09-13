@@ -35,12 +35,12 @@ class HistoryViewController: UIViewController {
 
 extension HistoryViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Record.recordList.count
+        return RecordList.shared.recordList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "historyCell", for: indexPath)
-        let score = Record.recordList[indexPath.row]
+        let score = RecordList.shared.recordList[indexPath.row]
         cell.textLabel?.text = score.scoreTime.convertTimeToString()
         cell.detailTextLabel?.text = "\(score.name) \(score.date.convertKoreanDate())"
         return cell

@@ -44,14 +44,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func saveRecord() {
-        let recordList = NSKeyedArchiver.archivedData(withRootObject: Record.recordList)
+        let recordList = NSKeyedArchiver.archivedData(withRootObject: RecordList.shared.recordList)
         UserDefaults.standard.set(recordList, forKey: "recordList")
     }
     
     func loadRecord() {
         guard let recordData = UserDefaults.standard.data(forKey: "recordList"),
             let recordList = NSKeyedUnarchiver.unarchiveObject(with: recordData) as? [Record] else { return }
-        Record.recordList = recordList
+        RecordList.shared.recordList = recordList
     }
 
 }

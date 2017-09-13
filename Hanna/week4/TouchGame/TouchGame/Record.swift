@@ -34,8 +34,9 @@ class Record: NSObject, NSCoding {
     }
 }
 
-extension Record {
-    static var recordList = [Record]() {
+class RecordList {
+    static var shared = RecordList()
+    var recordList = [Record]() {
         didSet {
             recordList.sort { $0.scoreTime < $1.scoreTime }
         }

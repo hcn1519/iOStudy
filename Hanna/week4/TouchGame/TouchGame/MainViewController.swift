@@ -16,9 +16,19 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         playButton.addTarget(self, action: #selector(playButtonAction), for: .touchUpInside)
         historyButton.addTarget(self, action: #selector(historyButtonAction), for: .touchUpInside)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        startAnimation()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        stopAnimation()
     }
     
     func playButtonAction() {
@@ -31,6 +41,17 @@ class MainViewController: UIViewController {
         if let historyViewController = storyboard?.instantiateViewController(withIdentifier: "HistoryViewController") as? HistoryViewController {
             navigationController?.pushViewController(historyViewController, animated: true)
         }
+    }
+    
+    func startAnimation() {
+        UIView.animate(withDuration: 0.7, delay: 0, options: [.repeat, .autoreverse], animations: {
+            self.logoLabel.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+        })
+    }
+    
+    func stopAnimation() {
+        logoLabel.layer.removeAllAnimations()
+        self.logoLabel.transform = CGAffineTransform(scaleX: 1, y: 1)
     }
 }
 
