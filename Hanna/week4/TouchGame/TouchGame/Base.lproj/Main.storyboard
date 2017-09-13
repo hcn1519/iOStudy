@@ -193,9 +193,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="59" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yxU-bK-2IJ">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="619"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="59" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yxU-bK-2IJ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="622"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="5fl-Q2-0zy" detailTextLabel="91x-7l-d3s" style="IBUITableViewCellStyleSubtitle" id="Ruu-52-h75">
@@ -224,19 +223,23 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ISj-Wu-nxc">
-                                <rect key="frame" x="188" y="617" width="186.5" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ISj-Wu-nxc">
+                                <rect key="frame" x="187.5" y="622" width="187" height="45"/>
                                 <color key="backgroundColor" red="0.79480314254760742" green="0.4092215895652771" blue="0.31373351812362671" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="G1p-me-xx5"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Reset">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uKX-la-ceX">
-                                <rect key="frame" x="0.0" y="617" width="186.5" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uKX-la-ceX">
+                                <rect key="frame" x="0.0" y="622" width="187.5" height="45"/>
                                 <color key="backgroundColor" red="0.79480314254760742" green="0.4092215895652771" blue="0.31373351812362671" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="AoP-il-2FH"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Close">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -244,6 +247,18 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uKX-la-ceX" firstAttribute="leading" secondItem="qCn-RV-Mq3" secondAttribute="leading" id="0xW-QO-awH"/>
+                            <constraint firstItem="ISj-Wu-nxc" firstAttribute="leading" secondItem="uKX-la-ceX" secondAttribute="trailing" id="3WC-gh-cK9"/>
+                            <constraint firstItem="fK7-Nm-0yT" firstAttribute="top" secondItem="ISj-Wu-nxc" secondAttribute="bottom" id="EPe-el-xXC"/>
+                            <constraint firstItem="uKX-la-ceX" firstAttribute="width" secondItem="ISj-Wu-nxc" secondAttribute="width" id="Pf9-wo-dAx"/>
+                            <constraint firstAttribute="trailing" secondItem="ISj-Wu-nxc" secondAttribute="trailing" id="p5f-WP-HYc"/>
+                            <constraint firstAttribute="trailing" secondItem="yxU-bK-2IJ" secondAttribute="trailing" id="r59-Pq-SlS"/>
+                            <constraint firstItem="yxU-bK-2IJ" firstAttribute="top" secondItem="qCn-RV-Mq3" secondAttribute="top" id="rKX-YZ-tdo"/>
+                            <constraint firstItem="fK7-Nm-0yT" firstAttribute="top" secondItem="uKX-la-ceX" secondAttribute="bottom" id="rwD-6j-AcL"/>
+                            <constraint firstItem="yxU-bK-2IJ" firstAttribute="leading" secondItem="qCn-RV-Mq3" secondAttribute="leading" id="sd3-Yp-V21"/>
+                            <constraint firstItem="fK7-Nm-0yT" firstAttribute="top" secondItem="yxU-bK-2IJ" secondAttribute="bottom" constant="45" id="woo-lx-cva"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="closeButton" destination="uKX-la-ceX" id="5lH-cI-bNT"/>
