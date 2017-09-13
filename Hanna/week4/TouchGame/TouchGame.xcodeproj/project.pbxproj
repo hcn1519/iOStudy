@@ -63,17 +63,41 @@
 			isa = PBXGroup;
 			children = (
 				B500AB471F65A8AF0089FC86 /* AppDelegate.swift */,
-				B500AB491F65A8AF0089FC86 /* MainViewController.swift */,
-				B57BC1D71F665B2500AF06AD /* PlayViewController.swift */,
-				B57BC1D51F665B1700AF06AD /* HistoryViewController.swift */,
-				B57BC1DF1F6848D700AF06AD /* Record.swift */,
-				B57BC1DB1F67D4B500AF06AD /* Extension.swift */,
+				B57BC1E21F69887C00AF06AD /* ViewController */,
+				B57BC1E11F69887000AF06AD /* Model */,
+				B57BC1E31F69889000AF06AD /* Extension */,
 				B500AB4B1F65A8AF0089FC86 /* Main.storyboard */,
 				B500AB4E1F65A8AF0089FC86 /* Assets.xcassets */,
 				B500AB501F65A8AF0089FC86 /* LaunchScreen.storyboard */,
 				B500AB531F65A8AF0089FC86 /* Info.plist */,
 			);
 			path = TouchGame;
+			sourceTree = "<group>";
+		};
+		B57BC1E11F69887000AF06AD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B57BC1DF1F6848D700AF06AD /* Record.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		B57BC1E21F69887C00AF06AD /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B500AB491F65A8AF0089FC86 /* MainViewController.swift */,
+				B57BC1D71F665B2500AF06AD /* PlayViewController.swift */,
+				B57BC1D51F665B1700AF06AD /* HistoryViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		B57BC1E31F69889000AF06AD /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B57BC1DB1F67D4B500AF06AD /* Extension.swift */,
+			);
+			name = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
