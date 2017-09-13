@@ -24,33 +24,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fsa-6k-jVj">
-                                <rect key="frame" x="16" y="239" width="167.5" height="188"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fsa-6k-jVj">
+                                <rect key="frame" x="16" y="233.5" width="167.5" height="200"/>
                                 <color key="backgroundColor" red="0.90917235612869263" green="0.37577995657920837" blue="0.27984082698822021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="PLAY">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rx8-Zh-TFa">
-                                <rect key="frame" x="191" y="239" width="167.5" height="188"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rx8-Zh-TFa">
+                                <rect key="frame" x="191" y="233.5" width="167.5" height="200"/>
                                 <color key="backgroundColor" red="0.90917235612869263" green="0.37577995657920837" blue="0.27984082698822021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="HISTORY">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1 to 25" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HYC-4h-BIV">
-                                <rect key="frame" x="89" y="51" width="196" height="97"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 to 25" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HYC-4h-BIV">
+                                <rect key="frame" x="98.5" y="64" width="177" height="72"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                 <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="0.60196382705479456" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="rx8-Zh-TFa" secondAttribute="trailing" constant="0.5" id="7an-FC-ype"/>
+                            <constraint firstItem="Fsa-6k-jVj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Bau-TC-0pC"/>
+                            <constraint firstItem="HYC-4h-BIV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.3" id="Btd-9z-wxN"/>
+                            <constraint firstItem="HYC-4h-BIV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FR7-ZC-OFL"/>
+                            <constraint firstItem="rx8-Zh-TFa" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="PIc-Oh-iXf"/>
+                            <constraint firstItem="Fsa-6k-jVj" firstAttribute="width" secondItem="rx8-Zh-TFa" secondAttribute="width" id="U2e-bA-Wbk"/>
+                            <constraint firstItem="Fsa-6k-jVj" firstAttribute="height" secondItem="rx8-Zh-TFa" secondAttribute="height" id="Uvn-vp-dOR"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Fsa-6k-jVj" secondAttribute="leading" id="kHO-PV-0Ri"/>
+                            <constraint firstItem="rx8-Zh-TFa" firstAttribute="leading" secondItem="Fsa-6k-jVj" secondAttribute="trailing" constant="7.5" id="qeu-FR-JPg"/>
+                            <constraint firstItem="Fsa-6k-jVj" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="zXy-5e-tJN"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mm2-rL-r0e"/>
                     <connections>
