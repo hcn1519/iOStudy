@@ -66,12 +66,12 @@
 				B500AB491F65A8AF0089FC86 /* MainViewController.swift */,
 				B57BC1D71F665B2500AF06AD /* PlayViewController.swift */,
 				B57BC1D51F665B1700AF06AD /* HistoryViewController.swift */,
+				B57BC1DF1F6848D700AF06AD /* Record.swift */,
 				B57BC1DB1F67D4B500AF06AD /* Extension.swift */,
 				B500AB4B1F65A8AF0089FC86 /* Main.storyboard */,
 				B500AB4E1F65A8AF0089FC86 /* Assets.xcassets */,
 				B500AB501F65A8AF0089FC86 /* LaunchScreen.storyboard */,
 				B500AB531F65A8AF0089FC86 /* Info.plist */,
-				B57BC1DF1F6848D700AF06AD /* Record.swift */,
 			);
 			path = TouchGame;
 			sourceTree = "<group>";

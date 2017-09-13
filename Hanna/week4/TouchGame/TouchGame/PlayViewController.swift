@@ -133,7 +133,7 @@ extension PlayViewController {
     func pressButton(_ sender: UIButton) {
         if sender.tag == pressCount {
             successAnimate(sender)
-            if pressCount == 3 {
+            if pressCount == buttons.count {
                 completeGame()
                 return
             }
