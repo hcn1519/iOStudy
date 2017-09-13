@@ -20,7 +20,9 @@ class HistoryViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
+        
         closeButton.addTarget(self, action: #selector(closeButtonAction), for: .touchUpInside)
+        resetButton.addTarget(self, action: #selector(resetButtonAction), for: .touchUpInside)
     }
     
     func closeButtonAction() {
@@ -29,6 +31,16 @@ class HistoryViewController: UIViewController {
         } else {
             self.dismiss(animated: true, completion: nil)
         }
+    }
+    
+    func resetButtonAction() {
+        let alertController = UIAlertController.resetAlert()
+        UIAlertAction.cancelButton(target: alertController, title: "NO", style: .destructive)
+        UIAlertAction.okButton(target: alertController, title: "YES") { (_) in
+            RecordList.shared.recordList.removeAll()
+            self.tableView.reloadData()
+        }
+        present(alertController, animated: true, completion: nil)
     }
 
 }

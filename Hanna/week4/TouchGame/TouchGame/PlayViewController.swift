@@ -43,6 +43,7 @@ class PlayViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        startButton.titleLabel?.adjustsFontSizeToFitWidth = true
         homeButton.addTarget(self, action: #selector(homeButtonAction), for: .touchUpInside)
         historyButton.addTarget(self, action: #selector(historyButtonAction), for: .touchUpInside)
         startButton.addTarget(self, action: #selector(startButtonAction(_:)), for: .touchUpInside)
@@ -181,10 +182,10 @@ extension PlayViewController {
         pressCount = 1
         stopTimer()
         let alertController = UIAlertController.completeAlert()
-        UIAlertAction.cancelButton(target: alertController, handler: { (_) in
+        UIAlertAction.cancelButton(target: alertController, title: "Cancel", style: .cancel, handler: { (_) in
             self.time = Double()
         })
-        UIAlertAction.okButton(target: alertController, handler: { (_) in
+        UIAlertAction.okButton(target: alertController, title: "OK", handler: { (_) in
             let name = alertController.textFields?[0].text
             let record = Record(name: name, scoreTime: self.time)
             RecordList.shared.recordList.append(record)

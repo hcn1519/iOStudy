@@ -40,18 +40,24 @@ extension UIAlertController {
         })
         return alertController
     }
+    
+    static func resetAlert() -> UIAlertController {
+        let alertController = UIAlertController(title: nil, message: "REALLY?", preferredStyle: .alert)
+        return alertController
+    }
 }
 
 extension UIAlertAction {
-    static func cancelButton(target: UIAlertController, handler: ((UIAlertAction) -> Void)? = nil) {
-        let cancelButton = UIAlertAction(title: "Cancel", style: .cancel, handler: handler)
+    static func cancelButton(target: UIAlertController, title: String, style: UIAlertActionStyle, handler: ((UIAlertAction) -> Void)? = nil) {
+        let cancelButton = UIAlertAction(title: title, style: style, handler: handler)
         target.addAction(cancelButton)
     }
     
-    static func okButton(target: UIAlertController, handler: ((UIAlertAction) -> Void)? = nil) {
-        let okButton = UIAlertAction(title: "OK", style: .default, handler: handler)
+    static func okButton(target: UIAlertController, title: String, handler: ((UIAlertAction) -> Void)? = nil) {
+        let okButton = UIAlertAction(title: title, style: .default, handler: handler)
         target.addAction(okButton)
     }
+    
 }
 
 extension Date {
