@@ -12,10 +12,14 @@ class HistoryViewController: UIViewController {
 
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var resetButton: UIButton!
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.tableFooterView = UIView()
         closeButton.addTarget(self, action: #selector(closeButtonAction), for: .touchUpInside)
     }
     
@@ -26,16 +30,24 @@ class HistoryViewController: UIViewController {
             self.dismiss(animated: true, completion: nil)
         }
     }
-    
 
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+extension HistoryViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
     }
-    */
-
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "historyCell", for: indexPath)
+        let score = Record.recordList[indexPath.row]
+        cell.textLabel?.text = score.scoreTime.convertTimeToString()
+        cell.detailTextLabel?.text = "\(score.name) \(score.date.convertKoreanDate())"
+        return cell
+    }
+    
 }
