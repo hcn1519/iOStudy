@@ -78,6 +78,12 @@ class CustomButton: UIView {
         self.option.setStateOption(option, for: state, button: self)
     }
     
+    func setTitleFont(_ font: UIFont, for state: ControlState) {
+        var option = self.option.stateOption(for: state) ?? Option()
+        option.font = font
+        self.option.setStateOption(option, for: state, button: self)
+    }
+    
     func drawButton() {
         self.alpha = self.state.contains(.highlighted) || self.state.contains(.disabled) ? 0.6 : 1
         self.isUserInteractionEnabled = !state.contains(.disabled)
@@ -90,6 +96,7 @@ class CustomButton: UIView {
 
         self.label.text = option?.title ?? normalOption?.title
         self.label.textColor = option?.titleColor ?? normalOption?.titleColor
+        self.label.font = option?.font ?? normalOption?.font
     }
     
     func addTarget(_ target: NSObject, action: Selector) {
@@ -125,6 +132,7 @@ struct ControlState: OptionSet, Hashable {
 struct Option {
     var title: String?
     var titleColor: UIColor?
+    var font: UIFont?
     
     var infoDic = [ControlState:Any]()
     
