@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="LogIn" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,69 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="tMX-wp-PMN">
+                                <rect key="frame" x="71" y="296" width="232" height="75"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ib7-bM-PIX">
+                                        <rect key="frame" x="0.0" y="0.0" width="232" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="gi0-wN-9GJ"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zHj-6N-7U2">
+                                        <rect key="frame" x="0.0" y="45" width="232" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="LKJ-JF-pcx"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ay0-Ce-IsD">
+                                <rect key="frame" x="245" y="391" width="58" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="58" id="blV-ys-jkE"/>
+                                </constraints>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" red="1" green="0.037535018238722739" blue="0.3331590460149465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VJt-BO-frT">
+                                <rect key="frame" x="71" y="391" width="49" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="49" id="gim-co-JnO"/>
+                                </constraints>
+                                <state key="normal" title="Sign In">
+                                    <color key="titleColor" red="0.41462632995568738" green="0.14214698690334482" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ay0-Ce-IsD" firstAttribute="trailing" secondItem="tMX-wp-PMN" secondAttribute="trailing" id="5xy-LZ-5GS"/>
+                            <constraint firstItem="VJt-BO-frT" firstAttribute="top" secondItem="tMX-wp-PMN" secondAttribute="bottom" constant="20" id="6uL-85-Pnt"/>
+                            <constraint firstAttribute="trailing" secondItem="tMX-wp-PMN" secondAttribute="trailing" constant="72" id="dnX-Oi-xI6"/>
+                            <constraint firstItem="Ay0-Ce-IsD" firstAttribute="top" secondItem="tMX-wp-PMN" secondAttribute="bottom" constant="20" id="elg-Hn-nXd"/>
+                            <constraint firstItem="tMX-wp-PMN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="71" id="iXN-IU-ZfW"/>
+                            <constraint firstItem="tMX-wp-PMN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jOm-xd-BGS"/>
+                            <constraint firstItem="VJt-BO-frT" firstAttribute="leading" secondItem="tMX-wp-PMN" secondAttribute="leading" id="si8-XF-Nst"/>
+                            <constraint firstItem="tMX-wp-PMN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="weR-uA-xc2"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="idTextField" destination="ib7-bM-PIX" id="EXT-Gd-eeV"/>
+                        <outlet property="passwordTextField" destination="zHj-6N-7U2" id="cQ6-3N-7sy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
         </scene>
     </scenes>
 </document>
