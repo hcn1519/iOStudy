@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var IDTextField: UITextField!
     @IBOutlet weak var PasswordTextField: UITextField!
@@ -16,17 +16,21 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        IDTextField.delegate = self
+        PasswordTextField.delegate = self
+        
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardwillShow), name: .UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardwillHide), name: .UIKeyboardWillHide, object: nil)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
         self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        IDTextField.resignFirstResponder()
+        PasswordTextField.resignFirstResponder()
+        return true
     }
     
     func keyboardwillShow(notification: Notification) {
