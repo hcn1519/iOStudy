@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1611" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LoginView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="65k-Sg-BKm">
+                                <rect key="frame" x="0.0" y="40" width="414" height="253"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tGY-ko-zSo">
+                                <rect key="frame" x="70" y="333" width="274" height="110"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i3E-ip-DAL">
+                                        <rect key="frame" x="0.0" y="0.0" width="274" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="zG6-Jo-csC"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FNw-HM-VTA">
+                                        <rect key="frame" x="0.0" y="40" width="274" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="tlt-hW-yVj"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DeF-OD-oSe">
+                                        <rect key="frame" x="0.0" y="80" width="274" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iXY-xf-Tbu">
+                                                <rect key="frame" x="0.0" y="0.0" width="137" height="30"/>
+                                                <state key="normal" title="Sign In"/>
+                                                <connections>
+                                                    <action selector="SignInButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="exr-yL-fN3"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfH-FK-pZB">
+                                                <rect key="frame" x="137" y="0.0" width="137" height="30"/>
+                                                <state key="normal" title="Sign Up">
+                                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="SignUpButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1RO-Iz-2JG"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="hfH-FK-pZB" firstAttribute="width" secondItem="iXY-xf-Tbu" secondAttribute="width" id="o9X-D2-9mq"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="DeF-OD-oSe" secondAttribute="bottom" id="2Dp-FT-bct"/>
+                                    <constraint firstItem="FNw-HM-VTA" firstAttribute="leading" secondItem="tGY-ko-zSo" secondAttribute="leading" id="HGt-Ah-7hM"/>
+                                    <constraint firstAttribute="width" priority="750" constant="500" id="Ngh-Dl-LzA">
+                                        <variation key="heightClass=compact" constant="450"/>
+                                    </constraint>
+                                    <constraint firstItem="i3E-ip-DAL" firstAttribute="leading" secondItem="tGY-ko-zSo" secondAttribute="leading" id="WXl-2A-q06"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="500" id="YJt-0p-Gfz"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="750" constant="400" id="cSO-IZ-aEV">
+                                        <variation key="heightClass=compact" constant="300"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="110" id="jAK-gu-UnK"/>
+                                    <constraint firstItem="i3E-ip-DAL" firstAttribute="top" secondItem="tGY-ko-zSo" secondAttribute="top" id="kSI-sY-4Zm"/>
+                                    <constraint firstAttribute="trailing" secondItem="DeF-OD-oSe" secondAttribute="trailing" id="lBi-2Y-BJo"/>
+                                    <constraint firstAttribute="trailing" secondItem="FNw-HM-VTA" secondAttribute="trailing" id="tIg-eb-52x"/>
+                                    <constraint firstItem="DeF-OD-oSe" firstAttribute="leading" secondItem="tGY-ko-zSo" secondAttribute="leading" id="tIx-lo-y1c"/>
+                                    <constraint firstAttribute="trailing" secondItem="i3E-ip-DAL" secondAttribute="trailing" id="xps-cM-IIX"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Ngh-Dl-LzA"/>
+                                        <exclude reference="YJt-0p-Gfz"/>
+                                        <exclude reference="cSO-IZ-aEV"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Ngh-Dl-LzA"/>
+                                        <exclude reference="YJt-0p-Gfz"/>
+                                        <exclude reference="cSO-IZ-aEV"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="65k-Sg-BKm" secondAttribute="trailing" id="4L6-2Y-QiC"/>
+                            <constraint firstItem="tGY-ko-zSo" firstAttribute="top" secondItem="65k-Sg-BKm" secondAttribute="bottom" constant="20" id="BXo-Mp-Ipz"/>
+                            <constraint firstItem="65k-Sg-BKm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Cvc-Cy-N7G"/>
+                            <constraint firstItem="tGY-ko-zSo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="20" id="D6U-YS-5ah"/>
+                            <constraint firstItem="tGY-ko-zSo" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="KTk-O8-YUs">
+                                <variation key="heightClass=compact" constant="60"/>
+                            </constraint>
+                            <constraint firstAttribute="trailing" secondItem="tGY-ko-zSo" secondAttribute="trailing" constant="70" id="Mkd-lf-BUb"/>
+                            <constraint firstItem="tGY-ko-zSo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="70" id="Umd-W7-Htm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tGY-ko-zSo" secondAttribute="trailing" constant="70" id="W23-jX-FcP"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="tGY-ko-zSo" secondAttribute="trailing" constant="30" id="XJC-gS-Miz">
+                                <variation key="heightClass=compact" constant="80"/>
+                            </constraint>
+                            <constraint firstItem="65k-Sg-BKm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="YcQ-46-yd8"/>
+                            <constraint firstItem="tGY-ko-zSo" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="ZMS-er-IE4">
+                                <variation key="heightClass=compact" constant="80"/>
+                            </constraint>
+                            <constraint firstItem="tGY-ko-zSo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dbf-Ua-27x"/>
+                            <constraint firstItem="65k-Sg-BKm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="gzt-rT-TSd"/>
+                            <constraint firstItem="tGY-ko-zSo" firstAttribute="top" secondItem="65k-Sg-BKm" secondAttribute="bottom" constant="40" id="jc3-0W-I1E"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="tGY-ko-zSo" secondAttribute="trailing" constant="30" id="nag-tR-3vy">
+                                <variation key="heightClass=compact" constant="60"/>
+                            </constraint>
+                            <constraint firstItem="tGY-ko-zSo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="70" id="v2L-us-FLW"/>
+                            <constraint firstItem="65k-Sg-BKm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yHS-1H-qci"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="YcQ-46-yd8"/>
+                                <exclude reference="gzt-rT-TSd"/>
+                                <exclude reference="BXo-Mp-Ipz"/>
+                                <exclude reference="KTk-O8-YUs"/>
+                                <exclude reference="Mkd-lf-BUb"/>
+                                <exclude reference="Umd-W7-Htm"/>
+                                <exclude reference="W23-jX-FcP"/>
+                                <exclude reference="XJC-gS-Miz"/>
+                                <exclude reference="ZMS-er-IE4"/>
+                                <exclude reference="jc3-0W-I1E"/>
+                                <exclude reference="nag-tR-3vy"/>
+                                <exclude reference="v2L-us-FLW"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="YcQ-46-yd8"/>
+                                <include reference="BXo-Mp-Ipz"/>
+                                <exclude reference="KTk-O8-YUs"/>
+                                <include reference="XJC-gS-Miz"/>
+                                <include reference="ZMS-er-IE4"/>
+                                <exclude reference="nag-tR-3vy"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="constraints">
+                                <include reference="gzt-rT-TSd"/>
+                                <include reference="Mkd-lf-BUb"/>
+                                <include reference="Umd-W7-Htm"/>
+                                <exclude reference="W23-jX-FcP"/>
+                                <include reference="jc3-0W-I1E"/>
+                                <exclude reference="v2L-us-FLW"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="IDTextField" destination="i3E-ip-DAL" id="BmX-bP-jWP"/>
+                        <outlet property="PasswordTextField" destination="FNw-HM-VTA" id="Rfn-LE-Jen"/>
+                        <outlet property="containerStackView" destination="tGY-ko-zSo" id="1aT-Am-mAg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="98.75" y="118.125"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="image" width="241" height="241"/>
+    </resources>
+</document>
