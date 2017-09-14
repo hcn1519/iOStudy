@@ -40,7 +40,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -52,6 +52,9 @@
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" red="1" green="0.037535018238722739" blue="0.3331590460149465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="touchedSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ir6-Yk-Puy"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VJt-BO-frT">
                                 <rect key="frame" x="71" y="391" width="49" height="30"/>
@@ -61,6 +64,9 @@
                                 <state key="normal" title="Sign In">
                                     <color key="titleColor" red="0.41462632995568738" green="0.14214698690334482" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="touchedSignIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zWJ-Eo-DLt"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

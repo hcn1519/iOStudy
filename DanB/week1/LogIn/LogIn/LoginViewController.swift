@@ -23,6 +23,21 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func touchedSignIn(_ sender: Any) {
+        if let idText = idTextField.text {
+            if let pwText = passwordTextField.text {
+                print("Id:\(idText), pw:\(pwText)")
+            }
+        }
+        
+        //옵셔널 바로 푸는 방법 (위험)
+        //print("Id:\(idTextField.text!), pw:\(passwordTextField.text!)")
+    }
+    
+    @IBAction func touchedSignUp(_ sender: Any) {
+        print("touched up inside - sign up")
+    }
 
 
 }
