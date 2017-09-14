@@ -41,7 +41,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             }
         }
         
-        //옵셔널 바로 푸는 방법 (위험)
+        //옵셔널 바로 푸는 방법 (위험한 방법)
         //print("Id:\(idTextField.text!), pw:\(passwordTextField.text!)")
     }
     
